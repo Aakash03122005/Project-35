@@ -63,7 +63,7 @@ function draw() {
 
   fill("black")
   textSize(28)
-  text("Use Arrows To Move The HotAirBalloon",400,60)
+  text("Use Arrows Keys To Move The HotAirBalloon",400,60)
 
 }
 
