@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<!DOCTYPE html><html><head>
+  <script src="p5.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+<script src="./p5.play.js"></script>    
 
-    <script src="p5.js"></script>
-    <script src="p5.dom.min.js"></script>
-    <script src="p5.sound.min.js"></script>
-    <script src="./p5.play.js"></script>    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script src="matter.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
- 
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCexhlym3xfRwD8g89I9_5EePfdH8oIHoA",
+  authDomain: "fir-hot-air-balloon.firebaseapp.com",
+  databaseURL: "https://fir-hot-air-balloon-default-rtdb.firebaseio.com",
+  projectId: "fir-hot-air-balloon",
+  storageBucket: "fir-hot-air-balloon.appspot.com",
+  messagingSenderId: "700160185792",
+  appId: "1:700160185792:web:574eb153390441fb676425"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 </script>
 
-    
-  </head>
-  <body>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+</head>
+<body>
     <script src="sketch.js"></script>
-  </body>
-</html>
+
+
+</body></html>
