@@ -12,8 +12,8 @@ function preload()
 
 function setup() {
 
-  //database = firebase.database();
-  //console.log(database);
+  database = firebase.database();
+  console.log(database);
 
   createCanvas(1200,600);
 
@@ -28,8 +28,9 @@ function setup() {
   balloon.scale=0.9
 
   // Syning the Position of the balloon with the database..
-  //var balloonPosition = database.ref('balloon/position')
-  //balloonPosition.on("value",readPosition,showError);
+  var balloonPosition = database.ref('balloon/position')
+  balloonPosition.on("value",readPosition);
+
 
 }
 
@@ -63,26 +64,23 @@ function draw() {
 
   fill("black")
   textSize(28)
-  text("Use Arrows Keys To Move The HotAirBalloon",400,60)
+  text("Use Arrows To Move The HotAirBalloon",400,60)
 
 }
 
 
-
-function writePosition(x,y)
+function updateHeight(x,y)
 {
   database.ref('balloon/height').set({
     'x': height.x + x,
     'y': height.y + y
   })
-// "set();" is used to set a value in the database.
 }
 
 function readPosition(data)
 {
-  position = data.val();
-  // "val();"  help us to read values..
- 
+ position=data.val();
+  console.log(position.x)
   balloon.x=position.x;
   balloon.y=position.y;
 }
